@@ -1,0 +1,362 @@
+/*Generic CSS, Applies To Each Page*/
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #777;
+    
+    background-image: url("../images/subtle_grunge.png");
+}
+
+.content {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content:"";
+    display: table;
+    clear: both;
+}
+/*end Generic CSS, Applies To Each Page*/
+
+
+/*Applies To Header Of Each Page*/
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    /*overflow: auto;*/
+}
+
+.header-name {
+    background-color: #4aaaa5;
+    
+    color: #fff;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    
+    width: 350px;
+    padding: 20px 0 20px;
+    
+    float: left;
+}
+
+header nav a {
+    float: right;
+    
+    margin-top: 25px;
+    padding: 5px 10px;
+    
+    text-decoration: none;
+    color: #777;
+}
+
+header nav a:hover {
+    background-color: #777;
+    color: #fff;
+    transition: 1s;
+}
+
+
+header nav a:nth-of-type(2) {
+    border-right: 2px solid #777;
+    border-left: 2px solid #777;
+}
+/*end CSS For Header Of Each Page/
+
+
+/*Applies To The Main Content Section On Each Page*/
+.main-content {
+    width: 650px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    overflow: auto;
+    box-sizing: border-box;
+    
+    border: 1px solid #ddd;
+    
+    background-color: #fff;
+    
+    float: left;
+}    
+
+.main-content-header {
+    color: #4aaaa5;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: bold;
+    
+    padding: 20px 0;
+    
+    border-bottom: 2px solid #ddd;
+}
+/*end CSS For The Main Content Section On Each Page*/
+
+
+/*Applies To Connect Sidebar Each Page*/
+.connect {
+    width: 270px;
+    padding: 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    
+    border: 1px solid #ddd;
+    
+    background-color: #fff;
+    
+    float: right;
+}
+
+.connect-header {
+    color: #4aaaa5;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: bold;
+    
+    padding-bottom: 20px;
+    
+    border-bottom: 2px solid #ddd;
+}
+
+.connect-links {
+    padding: 5px 0;
+    margin: 5px;
+    overflow: auto;
+}
+
+.connect-links a img {
+    width: auto;
+    height: 50px;
+    margin-right: 5px;
+}
+/*end CSS For Connect Sidebar On Each Page*/
+
+/*Applies To The Footer On Each Page*/
+
+footer {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    
+    border-top: 5px solid #4aaaa5;
+    
+    position: absolute;
+
+    color: #ddd;
+    font-size: .75em;
+    text-align: center;
+   
+    
+    background-color: #666;
+}
+
+.footer-content {
+    position: absolute;
+    bottom: 0;
+    margin: 5px auto;
+    width: 100%;
+}
+
+.footer-push-content {
+    min-height: calc(100vh - 50px);
+   }
+
+/*end CSS For The Footer On Each Page*/
+
+
+/*Applies To Index.html Only*/
+#picture-aboutme {
+    width: 200px;
+    height: auto;
+    box-sizing: border-box;
+    margin-right: 10px;
+    
+    /*border: 1px solid #ddd;*/
+    
+    float: left;
+}
+
+#about-me-content {
+    padding: 0;
+    margin: 20px 0 0 0;
+    overflow: auto;
+    
+    line-height: 150%;
+}
+/*end CSS For Index.html*/
+
+/*Applies To Portfolio.html Only*/
+#portfolio-content {
+    overflow: auto;
+}
+
+.image-wrapper {
+    position: relative;
+    margin: 20px 0;
+}
+
+.image-wrapper.left {
+   float: left; 
+}
+
+.image-wrapper.right {
+    float: right;
+}
+
+.image-wrapper img {
+    height: auto;
+    width: 275px;
+}
+
+.image-wrapper p {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 10px;
+    
+    
+    background-color: #4aaaa5;
+    
+    color: white;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 16px;
+    text-align: center;
+}
+/*end CSS For Portfolio.html*/
+
+/*Applies To Contact.html Only*/
+form {
+    margin-top: 20px;
+}
+
+form input {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+form textarea {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    resize: none;
+    
+    padding: 5px;
+    font-family: inherit;
+}
+
+form input[type = submit] {
+    width: 100px;
+    
+    color: white;
+    background-color: #4aaaa5;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+}
+/*end CSS For Contact.html*/
+
+/*Media Queries*/
+
+@media screen and (max-width: 980px) {
+    
+    /*common*/
+    .content {
+        max-width: 650px;
+    }
+    
+    .main-content {
+        max-width: 343px;
+    }   
+    
+    /*index.html*/
+    #picture-aboutme {
+       width: 300px;
+       height: auto;
+       float: none;
+       margin: 0;
+    }
+    
+    .image-wrapper img {
+    height: auto;
+    width: 300px;
+}
+
+    .image-wrapper p {
+    width: 300px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    
+    /*Common*/
+    .content {
+        width:100%;
+    }
+    
+    .main-content {
+        max-width: 100%;
+    }
+    
+    .connect {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /*index.html*/
+    #picture-aboutme {
+       width: 200px;
+       height: auto;
+       float: left;
+       margin-right: 10px;
+    }
+}
+    
+@media screen and (max-width: 640px) {
+    
+    /*common*/
+    .content {
+        width: 100%;
+    }
+    
+    .header-name {
+        width: 100%;
+    }
+    
+    header nav a {
+        box-sizing: border-box;
+        text-align: center;
+        width: 33%;
+        margin-top: 0;
+        padding: 5px 0;
+    }
+    
+    /*index.html*/
+    .main-content {
+        max-width: 343px;
+        float: none;
+        margin-right: auto;
+        margin-left: auto;
+    
+    }
+    
+    .connect {
+        max-width: 343px;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+    }
+    
+    #picture-aboutme {
+       width: 300px;
+       height: auto;
+       float: none;
+       margin: 0;
+    }  
+} 
+/*end Media Queries*/
